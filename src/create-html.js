@@ -1,4 +1,10 @@
+'use strict'
 
+const fs = require('fs')
+
+const optimalRoute = require('./optimal-route')
+
+fs.writeFile('index.html', `
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -94,7 +100,7 @@
 					}
 				}
 
-				optimal_route = ["Russian River Brewing Company, 4th Street, Santa Rosa, CA","Chuckanut Brewery and Kitchen, Bellingham, WA","Elysian Brewery, Seattle, WA","Breakside Brewery, Portland, OR"]
+				optimal_route = ${JSON.stringify(optimalRoute)}
 
 				createRoutes(optimal_route)
 
@@ -106,3 +112,4 @@
 			<div id="map-canvas"></div>
 		</body>
 	</html>
+`)
