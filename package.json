@@ -1,0 +1,24 @@
+{
+  "name": "genetic-route-planner",
+  "version": "1.0.0",
+  "description": "Genetic algorithm to plan the best possible route between many places",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jontewks/genetic-route-planner.git"
+  },
+  "author": "Jon Tewksbury (jontewks@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jontewks/genetic-route-planner/issues"
+  },
+  "homepage": "https://github.com/jontewks/genetic-route-planner#readme",
+  "dependencies": {
+    "bluebird": "^3.0.2",
+    "google-distance": "^1.0.1",
+    "googlemaps": "^1.0.2"
+  }
+}
