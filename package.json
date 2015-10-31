@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Genetic algorithm to plan the best possible route between many places",
   "scripts": {
-    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
