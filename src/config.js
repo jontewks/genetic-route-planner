@@ -4,8 +4,8 @@ module.exports = {
 	waypoints: [
 		'Russian River Brewing Company, 4th Street, Santa Rosa, CA',
 		'Chuckanut Brewery and Kitchen, Bellingham, WA',
-		'Elysian Brewery, Seattle, WA',
 		'Breakside Brewery, Portland, OR',
+		// 'Elysian Brewery, Seattle, WA',
 		// 'AleSmith Brewery, San Diego, CA',
 		// 'Thai Me Up Brewery, Jackson, WY',
 		// 'Firestone Walker Brewery, Paso Robles, CA',
