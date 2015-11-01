@@ -18,4 +18,6 @@ module.exports = {
 		// 'Upright Brewing, Portland, OR',
 		// 'Deschutes Brewery, Bend, OR',
 	],
+	maxMutations: 3,
+	populationSize: 100,
 }

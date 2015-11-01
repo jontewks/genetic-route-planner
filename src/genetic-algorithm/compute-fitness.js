@@ -8,7 +8,7 @@ module.exports = solution => {
 
 	for (let i = 0; i < solution.length; i++) {
 		const waypoint1 = solution[i]
-		const waypoint2 = solution[i + 1] || solution[0]
+		const waypoint2 = solution[i + 1] || solution[0] // Wrap back to beginning for last element
 		const key = [waypoint1, waypoint2].sort()
 
 		fitness += distances[key]
