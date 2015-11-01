@@ -4,8 +4,8 @@ const Promise = require('bluebird')
 const distance = Promise.promisifyAll(require('google-distance'))
 const writeFile = Promise.promisify(require('fs').writeFile)
 
-const waypoints = require('../config').waypoints
-const createCombos = require('../util/create-combinations')
+const waypoints = require('./config').waypoints
+const createCombos = require('./util/create-combinations')
 
 const waypointCombos = createCombos(waypoints)
 const distances = []
@@ -19,5 +19,5 @@ waypointCombos.forEach(combo => {
 
 Promise.all(distances)
 	.then(data => {
-		return writeFile('src/waypoint-data.json', JSON.stringify(data))
+		return writeFile(__dirname + '/json/waypoint-data.json', JSON.stringify(data))
 	})
