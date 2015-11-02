@@ -1,6 +1,7 @@
 'use strict'
 
 const _ = require('lodash')
+
 const waypoints = require('../config').waypoints
 const populationSize = require('../config').populationSize
 

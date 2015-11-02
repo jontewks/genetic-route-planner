@@ -1,11 +1,12 @@
 'use strict'
 
 const _ = require('lodash')
+
 const maxMutations = require('../config').maxMutations
 
 // Applies between 1 and maxMutations to the current solution by swapping two waypoints.
 module.exports = solution => {
-	const mutatedSolution = solution
+	const mutatedSolution = _.clone(solution)
 	const numMutations = _.random(1, maxMutations)
 
 	_.times(numMutations, () => {
