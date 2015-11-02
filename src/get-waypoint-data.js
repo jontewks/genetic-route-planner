@@ -12,7 +12,7 @@ const distanceData = {}
 
 Promise.resolve(waypointCombos)
 	.each(combo => {
-		return Promise.delay(110).then(() => {
+		return Promise.delay(100).then(() => {
 			distance.getAsync({
 				origin: combo[0],
 				destination: combo[1],

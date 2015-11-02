@@ -8,7 +8,7 @@ const optimalRoute = require('../json/optimal-route')
 fs.readFileAsync(__dirname + '/base-html.html', 'utf8')
 	.then(html => {
 		return fs.writeFileAsync(
-			'index.html',
+			__dirname + '/../../index.html',
 			html.replace('{{optimalRoute}}', JSON.stringify(optimalRoute))
 		)
 	})

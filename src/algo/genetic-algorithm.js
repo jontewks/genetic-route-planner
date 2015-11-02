@@ -1,6 +1,8 @@
 'use strict'
 
 const _ = require('lodash')
+const Promise = require('bluebird')
+const writeFile = Promise.promisify(require('fs').writeFile)
 
 const generateRandomPopulation = require('./generate-random-population')
 const numGenerations = require('../config').generations
@@ -48,5 +50,13 @@ module.exports = () => {
 		population = newPopulation
 	})
 
-	console.log('Best route found', population[0], 'length', computeFitness(population[0]))
+	console.log(
+		'Best route found:\n',
+		population[0],
+		'\n',
+		'Distance value:\n',
+		computeFitness(population[0])
+	)
+
+	return writeFile('src/json/optimal-route.json', JSON.stringify(population[0]))
 }
