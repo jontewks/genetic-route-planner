@@ -12,6 +12,7 @@ const shuffleSolution = require('./shuffle-solution')
 
 module.exports = () => {
 	let population = generateRandomPopulation()
+	let generations = 0
 
 	_.times(numGenerations, () => {
 		const populationsSortedByFitness = []
@@ -48,6 +49,10 @@ module.exports = () => {
 		})
 
 		population = newPopulation
+
+		process.stdout.cursorTo(0)
+		process.stdout.write('Generations complete: ' + ++generations)
+		process.stdout.clearLine(1)
 	})
 
 	console.log(
