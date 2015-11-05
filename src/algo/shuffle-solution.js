@@ -6,7 +6,7 @@ module.exports = solution => {
 	const shuffledSolution = _.clone(solution)
 	const startIndex = _.random(solution.length - 1)
 	let insertIndex = _.random(solution.length - 1)
-	const shuffleLength = _.ceil(solution.length / 4)
+	const shuffleLength = _.ceil(_.random(0, solution.length / 3))
 
 	// Make sure the indicies are never the same
 	while (startIndex === insertIndex) {
