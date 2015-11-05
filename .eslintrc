@@ -19,7 +19,6 @@
 		"no-const-assign": 2,
 
 		"no-cond-assign": [2, "always"],
-		"no-console": 1,
 		"no-debugger": 1,
 		"no-alert": 1,
 		"no-constant-condition": 1,
